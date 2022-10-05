@@ -1,0 +1,37 @@
+<head>
+  <meta charset="UTF-8" />
+  <title>Productos</title>
+
+</head>
+<body>
+  <div class="col-md-4 mx-auto">
+    <div class="card text-center">
+      <div class="card-header">
+        <h3>Lista de Productos</h3>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-dark">
+            <tr style="color: yellow;">
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Foto</th>
+            </tr>
+            {{#if prod}}
+              {{#each prod}}
+                <tr>
+                  <td>{{this.name}}</td>
+                  <td>{{this.price}}</td>
+                  <td><IMG SRC="{{this.thumbnail}}" ALT="IMAGEN"></td>
+                </tr>
+              {{/each}}
+            {{else}}
+              <h2>No hay productos</h2>
+            {{/if}}
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>

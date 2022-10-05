@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+</head>
+
+<body>
+  <script src="cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+
+
+ 
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+ 
+        <h3>Agregar producto</h3>
+      
+    
+        <form onsubmit="return addProd(this)">
+          
+            <input type="text" id="title" placeholder="Nombre del producto"/>
+         
+            <input type="number" id="precio" placeholder="Precio"/>
+         
+            <input type="text" id="thumbnail" placeholder="Imagen (URL)" />
+         
+            <button type="submit">
+              Agregar
+            </button>
+          
+        </form>
+  
+  
+
+  <div id="tablaProducto"></div> 
+
+
+
+
+  
+        <h3>Chat</h3>
+     
+    
+        <div id="mensajes"></div>
+        <form onsubmit="return addMessage(this)">
+        
+            <input type="text" id="mail"  placeholder="Mail" />
+         
+            <input type="text" id="nombre"  placeholder="Nombre"/>
+        
+            <input type="text" id="apellido"  placeholder="Apellido"/>
+        
+            <input type="number" id="edad" placeholder="Edad" />
+        
+            <input type="text" id="alias"  placeholder="Alias" />
+      
+            <input type="text" id="avatar"  placeholder="Avatar"/>
+         
+            <input type="text" id="texto" placeholder="Escribe un mensaje"/>
+       
+            <button type="submit">
+              Enviar
+            </button>
+            
+        
+        </form>
+  
+      </div>
+  
+</body>
+
+</html>
